@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-..." crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="jquery-3.7.1.min.js"></script>
+    <link rel="icon" href="img/Logo.png">
+    <title>AUB Permission</title>
+</head>
+<body>
+    <nav>
+        <div class="navigate">
+            <div class="nav" >
+                <div class="logo">
+                    <p class="fa-bounce">AUB Portal</p>
+                </div>
+                <div class="permision_icon">
+                    <i class="fa-solid fa-bell" style="color: #f0f0f0;"></i>
+                    <div class="dropdown">
+                        <div style="color:#999999" class="btn  dropdown-toggle"  data-bs-toggle="dropdown" aria-expanded="false">
+                          <i class="fa-solid fa-circle-user" style="font-size: 25px;"></i>Teng Chantola
+                        </div>
+                        <div class="dropdown-menu">
+                          <p class="dropdown-item" id="profiles">
+                            <i class="fa-solid fa-user-gear"></i>Profile</p>
+                          <a href="Login.html" style="text-decoration: none;"><p class="dropdown-item"><i class="fa-solid fa-arrow-right-from-bracket"></i>Log Out</p></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <section>
+        <div class="slide">
+           <div class="yellow"></div>
+           <div>
+                <div class="list">
+                    <i class="fa-solid fa-book-open-reader"></i>
+                    <p>My Major</p>
+                </div>
+                <div class="list">
+                    <i class="fa-solid fa-book-open"></i>
+                    <p>My Courses</p>
+                </div>
+                <div class="list">
+                    <i class="fa-solid fa-chart-simple"></i>
+                    <p>My Grades</p>
+                </div>
+                <div class="list">
+                    <i class="fa-solid fa-book"></i>
+                    <p>My Library</p>
+                </div>
+                <div class="list">
+                    <i class="fa-solid fa-briefcase"></i>
+                    <p>Work Experience</p>
+                </div>
+                <div class="list" id="req">
+                    <i class="fa-solid fa-file-pen"></i>
+                    <p>Requests</p>
+                </div>
+                <div class="list">
+                    <i class="fa-solid fa-trophy"></i>
+                    <p>My Achievement</p>
+                </div>
+           </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="meun_bar">
+             <div class="meun_second">
+                    <div class="dropdown">
+                    <button class="btn-menu btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fa fa-bars" aria-hidden="true"></i> Menu</button>
+                    <ul class="dropdown-menu menu-list">
+                        <li><button class="dropdown-item" type="button">
+                            <i class="fa-solid fa-user-pen fa-bounce"></i> Student Permission</button></li>
+                        <li><button class="dropdown-item" type="button">
+                            <i class="fa-solid fa-scale-balanced fa-bounce"></i> Student Grievance</button></li>
+                    </ul>
+                </div>
+             </div>
+                <div class="permission_second">
+                    <i class="fa-solid fa-bell fa-bounce" style="color: #f0f0f0; font-size: 20px;" id="showPopup"></i> Permission Request
+                </div>
+        </div>
+        <div class="gr_info" style="display:none">
+            <div id="noti">
+                 <P>Notification</P>
+             </div>
+           <div id="stu_per">
+             
+                <p><i class="fa-solid fa-list-check"></i>Student Permission</p>
+                <p id="num">ssdvzasascascdsv</p>
+           </div> 
+            <div id="stu_grie"><p><i class="fa-solid fa-envelope"></i>Student Grievance</p></div>
+         </div>
+         <div id="img-gr" style="display:none">
+            <img id="img_profile" src="img/Profile.png">
+         </div>
+         <div id="personal-info" style="display:none">
+            <p id="info_tittle">Your information</p>
+            <p>Official ID (0005422)</p>
+            <p>Sex (M)</p>
+            <p>Date of Birth (25-Oct-2004)</p>
+            <p>Phone (+85516638377)</p>
+         </div>
+         <div style="display:none" id="change-pass"  class="btn-group" role="group" aria-label="Basic example">
+            <button id="change-icon"  type="button" class="btn btn-primary"  style="background-color: #2B4F73; border:none"><i class="fa-solid fa-key"></i></button>
+            <button id="change-btn" type="button" class="btn btn-primary" style="background-color:#1b3451 ;  border:none">Change Password</button>
+        </div>
+        <div class="content" >             
+            <form class="card" id="card2" style="width: 40vw;" >
+                <div class="card-body">
+                <div class="form-group ">
+                <select class="form-select" aria-label="Default select example">
+                    <option value="1">Student Permission</option>
+                    <option value="2">Change Permission</option>
+                </select>
+                </div>
+                <div class="form-group" >
+                    <label for="validationDefault01" class="form-label">Student ID :</label>
+                    <input readonly style="border-radius:0% ; background-color:#EEEEEE" type="text" class="form-control" id="validationDefault01" value="0005422" required>
+                </div>
+                <div class="form-group" >
+                    <label for="validationDefault01" class="form-label">Name :</label>
+                    <input readonly style="border-radius:0% ; background-color:#EEEEEE" type="text" class="form-control" id="validationDefault01" value="Teng Chantola" required>
+                </div>
+                <div class="form-group" >
+                    <label for="validationDefault01" class="form-label">Sex :</label>
+                    <input readonly style="border-radius:0% ; background-color:#EEEEEE" type="text" class="form-control" id="validationDefault01" value="M" required>
+                </div>
+                <div class="form-group" >
+                    <label for="validationDefault01" class="form-label">Telephone :</label>
+                    <input readonly style="border-radius:0% ; background-color:#EEEEEE" type="text" class="form-control" id="validationDefault01" value="+85516638377" required>
+                </div>
+                <label for="validationDefault01" class="form-label">Major <span style="color: red;">*</span></label>
+                <select class="form-select" aria-label="Default select example">
+                    <option value="1">Fintech (Bachelor)</option>
+                  
+                </select>
+                <label for="validationDefault01" class="form-label" >Session <span style="color: red;">*</span></label>
+                <select class="form-select" id="form_session" aria-label="Default select example">
+                    <option value="Wednesday 03-04-2024(17:30-19:30)">Wednesday 03-04-2024(17:30-19:30)</option>
+                    <option value="Wednesday 03-04-2024(19:00-20:30)">Wednesday 03-04-2024(19:00-20:30)</option>
+                    <option value="Thurday 04-04-2024(17:30-19:30)">Thurday 04-04-2024(17:30-19:30)</option>
+                    <option value="Thurday 04-04-2024(19:00-20:30)">Thurday 04-04-2024(19:00-20:30)</option>
+                    <option value="Friday 05-04-2024(17:30-19:30)">Friday 05-04-2024(17:30-19:30)</option>
+                    <option value="Friday 05-04-2024(19:00-20:30)">Friday 05-04-2024(19:00-20:30)</option>
+                    <option value="Monday 08-04-2024(17:30-19:30)">Monday 08-04-2024(17:30-19:30)</option>
+                    <option value="Monday 08-04-2024(19:00-20:30)">Monday 08-04-2024(19:00-20:30)</option>
+                    <option value="Tuesday 09-04-2024(17:30-19:30)">Tuesday 09-04-2024(17:30-19:30)</option>
+                    <option value="Tuesday 09-04-2024(19:00-20:30)">Tuesday 09-04-2024(19:00-20:30)</option>
+                    <option value="Wednesday 10-04-2024(17:30-19:30)">Wednesday 10-04-2024(17:30-19:30)</option>
+                    <option value="Wednesday 10-04-2024(19:00-20:30)">Wednesday 10-04-2024(19:00-20:30)</option>
+                    <option value="Thurday 11-04-2024(17:30-19:30)">Thurday 11-04-2024(17:30-19:30)</option>
+                    <option value="Thurday 11-04-2024(19:00-20:30)">Thurday 11-04-2024(19:00-20:30)</option>
+                </select>
+                <label for="validationDefault01"  class="form-label">Reasons <span style="color: red;">*</span><span id="Reason_Pre"></span></label>
+                <div class="form-floating">
+                    <textarea class="form-control" id="Reasons" placeholder="Reasons" id="floatingTextarea"></textarea>
+                    <label for="floatingTextarea">Reason</label>
+                </div>
+                  <div  class="btn-group add"  id="btn-group"  role="group" aria-label="Basic example" >
+                    <button  type="button" class="btn btn-primary" style="background-color: #172C45; border:none"><i class="fa-solid fa-plus"></i></button>
+                    <button  type="button" class="btn btn-primary" style="background-color:#1b3451 ;  border:none">Add</button>
+                  </div>
+                  <table class="table table-bordered table-responsive-sm " id="noti_tbl">
+                    <thead class="table-active">
+                        <tr>
+                            <th>Session</th>
+                            <th>Reason</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody class="info">
+                        <tr class="e">                            
+                        </tr>
+                        <tr >
+                            <td colspan="3" id="mataching" >No matching records found</td>
+                        </tr>
+                        <tr>
+                            <td  colspan="3" id="reason"></td>
+                        </tr>
+                    </tbody>
+                  </table>                 
+                  <div class="gr">
+                    <div id="gro"  class="btn-group" role="group" aria-label="Basic example">
+                        <button   type="button" class="btn btn-primary"  style="background-color: #8CBF8C; border:none"><i class="fa-solid fa-check"></i></i></button>
+                        <button  type="button" class="btn btn-primary" style="background-color:#95D195 ;  border:none">Submit</button>
+                    </div>
+                    <div id="gro" class="btn-group" role="group" aria-label="Basic example">
+                        <button type="button" class="btn btn-primary" style="background-color: #B94743; border:none"><i class="fa-solid fa-times"></i></i></button>
+                        <button type="button" class="btn btn-primary" style="background-color:#D9534F ;  border:none">Cancel</button>
+                    </div>
+                </div>
+            </div>
+            
+            </form>
+            
+            <form class="card" id="card1" style="width: 40vw; display:none;" >
+                <div class="card-body">
+                    <P id="ss">Permission Detail</P>                  
+                    <div class="form-group ">
+                    </div>
+                    <div class="form-group" id="per" >
+                        <label for="validationDefault01" class="form-label">Student ID :</label>
+                        <input style="cursor: not-allowed;" readonly style="border-radius:0% ; background-color:#EEEEEE" type="text" class="form-control" id="validationDefault01" value="0005422" required>
+                    </div>
+                    <div class="form-group" >
+                        <label for="validationDefault01" class="form-label">Name :</label>
+                        <input style="cursor: not-allowed;" readonly style="border-radius:0% ; background-color:#EEEEEE" type="text" class="form-control" id="validationDefault01" value="Teng Chantola" required>
+                    </div>
+                    <div class="form-group" >
+                        <label for="validationDefault01" class="form-label">Sex :</label>
+                        <input style="cursor: not-allowed;" readonly style="border-radius:0% ; background-color:#EEEEEE" type="text" class="form-control" id="validationDefault01" value="M" required>
+                    </div>
+                    <div class="form-group" >
+                        <label for="validationDefault01" class="form-label">Telephone :</label>
+                        <input style="cursor: not-allowed;" readonly style="border-radius:0% ; background-color:#EEEEEE" type="text" class="form-control" id="validationDefault01" value="+85516638377" required>
+                    </div>
+                    <label for="validationDefault01" class="form-label">Telephone :</label>
+                    <select class="form-select" aria-label="Default select example">
+                        <option value="1">Fintech (Bachelor)</option>                   
+                    </select>
+                    <div class="form-group" >
+                        <label for="validationDefault01" class="form-label">Session :</label>
+                        <input style="cursor: not-allowed;" readonly style="border-radius:0% ; background-color:#EEEEEE" type="text" class="form-control" id="Default01"  required>
+                    </div>
+                    <div class="form-group" >
+                        <label for="validationDefault01" class="form-label">Reason :</label>
+                        <textarea style="cursor: not-allowed;" type="text" class="form-control" id="validation" disabled="" style="width: 100%; height: 100px; resize: none;"></textarea>
+                    </div>
+                    <div class="form-group" id="Rejected_reason_btn" style="display:none" >
+                        <label for="validationDefault01" class="form-label">Rejected Reason :</label>
+                        <textarea style="cursor: not-allowed;" type="text" class="form-control" id="Rejected_reason" disabled="" style="width: 100%; height: 100px; resize: none;"></textarea>
+                    </div>
+                    <div>
+                        <small id="emailHelp"></small>
+                    </div>
+                    <div class="pending">
+                        <div id="Approved"  class="btn-group" role="group" aria-label="Basic example">
+                            <button   type="button" class="btn btn-primary"  style="background-color: #172C45; border:none"><i class="fa-solid fa-check"></i></i></button>
+                            <button  type="button" class="btn btn-primary" style="background-color:#1b3451 ;  border:none;">Approve</button>
+                        </div>
+                        <div id="reject" class="btn-group" role="group" aria-label="Basic example">
+                            <button type="button" class="btn btn-primary" style="background-color: #B94743; border:none"><i class="fa-solid fa-times"></i></button>
+                            <button type="button" class="btn btn-primary" style="background-color:#D9534F ;  border:none;">Reject</button>
+                        </div>
+                       <div id="Delete" class="btn-group" role="group" aria-label="Basic example">
+                            <button type="button" class="btn btn-primary" style="background-color: #C9801A; border:none"><i class="fa-solid fa-delete-left"></i></button>
+                            <button type="button" class="btn btn-primary" style="background-color:#EC971F ;  border:none">Delete</button>
+                        </div>
+                        <div id="back" class="btn-group" role="group" aria-label="Basic example">
+                            <button type="button" class="btn btn-primary" style="background-color: #B94743; border:none"><i class="fa-solid fa-left-long"></i></i></i></button>
+                            <button type="button" class="btn btn-primary" style="background-color:#D9534F ;  border:none">Back</button>
+                        </div>
+                    </div>                   
+                </div>
+            </form>
+        </div>
+    </section>
+
+    
+
+    <div id="popupContainer">       
+        <div id="popupCard">           
+            <div class="header_popup">
+                <div id="closePopup"  class="ui-button ui-corner-all ui-widget ui-button-icon-only ui-dialog-titlebar-close" title="Close"><span class="ui-button-icon ui-icon ui-icon-closethick"></span>
+                    <i class="fa-solid fa-xmark" style="  text-align: center;"></i></div>
+            </div>
+            <div class="contain">
+                <div>
+                    <p id="mac" style="padding:20px">No matching records found</p>
+                </div>             
+            </div>         
+        </div>      
+    </div>
+
+
+    <div id="delete_check">
+        <div id="popCard_delete">
+            <div class="form-groups" >
+                <i class="fa-solid fa-ban"></i>
+                <i class="fa-regular fa-circle-xmark" id="close"></i>
+                <label for="validationDefault01" class="form-label">Are you sure you want to delete ?</label>
+                <div id="checkDelete"  class="btn-group" role="group" aria-label="Basic example">
+                    <button  id="Checkre" type="button" class="btn btn-primary"  style="background-color: #C9801A; border:none"><i class="fa-solid fa-check"></i></i></button>
+                    <button id="Checkre2" type="button" class="btn btn-primary" style="background-color:#EC971F ;  border:none">Okey</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="Popreject">
+        <div id="popupCard_reject">
+            <div class="form-groups" >
+                
+                <i class="fa-regular fa-circle-xmark"></i>
+                <label for="validationDefault01" class="form-label">Why you want to reject ?</label>
+                <input  style="border-radius:0% ; background-color:#EEEEEE" type="text" class="form-control" id="Default011"  required>
+                <small id="fill"></small><br>
+                <div id="checkReject"  class="btn-group" role="group" aria-label="Basic example">
+                    <button  id="Checkre" type="button" class="btn btn-primary"  style="background-color: #B94743; border:none"><i class="fa-solid fa-check"></i></i></button>
+                    <button id="Checkre2" type="button" class="btn btn-primary" style="background-color:#D9534F ;  border:none">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="pass" style="display:none">
+        <div id="pass_change">
+            <div class="form-groups">
+                <i class="fa-regular fa-circle-xmark"></i>
+                <label for="validationDefault01" class="form-label">Old password</label>
+                <input  style="border-radius:0% ; background-color:#EEEEEE" type="text" class="form-control" id="Default011"  required>
+                <label for="validationDefault01" class="form-label">New password</label>
+                <input  style="border-radius:0% ; background-color:#EEEEEE" type="text" class="form-control" id="Default011"  required>
+                <label for="validationDefault01" class="form-label">Re-type Password</label>
+                <input  style="border-radius:0% ; background-color:#EEEEEE" type="text" class="form-control" id="Default011"  required>
+                <div id="checkpass"  class="btn-group" role="group" aria-label="Basic example">
+                    <button   type="button" class="btn btn-primary"  style="background-color: #2B4F73; border:none"><i class="fa-solid fa-check"></i></i></button>
+                    <button  type="button" class="btn btn-primary" style="background-color:#1B3451 ;  border:none">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+    <script src="main.js"></script>
+</body>
+</html>

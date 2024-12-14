@@ -1,0 +1,507 @@
+*{
+    margin:0;
+    padding:0;
+   
+}
+
+.nav{
+    display:flex;
+    justify-content: space-between;
+   
+}
+.navigate{
+    background-image: url("img/Screenshot\ 2024-01-15\ 110553.png");
+    height:60px;
+    width:100%;
+    position: relative;
+}
+.permision_icon{
+    display:flex;
+    font-family: inter;
+    color:#f0f2eb;
+    padding-right:25px;
+}
+.permision_icon .fa-bell{
+    margin-top: 12px;
+    padding-top:9.5px;
+    font-size:20px;
+}
+.fa-circle-user{
+    margin-right:10px;
+}
+.logo p{
+    color:#f0f2eb;
+    font-family: inter;
+    font-size:18px;
+    padding-top:16px;
+    padding-left:25px;
+}
+.slide{
+    height:91.5vh;
+    width:215px;
+    background-color:#1b3451;
+}
+.yellow{
+    background-color:#cba02d;
+    height:3px;
+    width:215px;
+}
+.list {
+    display: flex;
+    padding: 16px;
+    color: #f0f2eb;
+    font-family: inter;
+    
+  }
+  .list i {
+    margin-right: 5px; /* Adjust the spacing between the icon and text */
+  }
+  
+  .list p {
+    margin: 0; 
+    align-self: center;/* Vertically center the text */
+  }
+  
+
+.list:hover{
+    background-color:#2b4f73;
+}
+.list p{
+    margin-left:10px;
+}
+.dropdown-toggle{
+    position: fixed;
+    right:47px;
+    
+    border:none;
+    height:60px;
+    padding-top:16px;
+    border-radius: 0%;
+}
+.dropdown{
+    height:60px;
+}
+.dropdown-toggle:hover{
+   background-color: #2b4f73;
+
+}
+.dropdown-item{
+    padding:10px;
+    height:40px;
+   
+}
+.fa-user-gear{
+    margin-right:10px;
+}
+.fa-arrow-right-from-bracket{
+    margin-right:10px;
+}
+.dropdown-item:hover{
+    color:#cba02d;
+    background-color: #2b4f73;
+}
+.dropdown-menu{
+    height:110px;
+    border-radius:0%;
+    width:190px;
+}
+.meun_bar{
+    display:flex;
+    justify-content: space-between;
+    color:#f0f2eb;
+    margin-bottom:20px;
+}
+.section{
+    background-color: #1b3451;
+    padding-inline:25px;
+    padding-top:7px;
+    position: absolute;
+    top:75px;
+    left: 220px;
+    height: 45px;
+    width:84vw;
+    border-radius:10px 10px 0px 0px;
+    
+   
+}
+.fa-bars{
+    padding-right:7px;
+}
+.card { 
+    margin: auto;
+    margin-bottom:80px;
+    border-radius: 5px;
+    padding-bottom:50px;
+    background-color: #ffffff;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border: none;
+}
+.content{
+    padding-top:80px;
+    width:170px;
+    position:fixed;
+    left: 40; /* Same as sidebar width  17%*/
+    top: 130px;
+    width:1250px;
+    height: auto;
+    overflow: auto;
+    height: calc(100vh - 60px);
+    transition: 0.6s ease-in-out;
+    padding:20px;
+   
+}
+.menu-list button:hover{
+    color:goldenrod;
+    background-color: #1B3451;
+}
+.btn-menu{
+    color: white;
+}
+.btn-menu:hover{
+    color: rgb(191, 185, 185);
+    border-color: #1B3451;
+}
+.content p{
+    position: fixed;
+    left:554px;
+    color:black;
+    font-family: inter;
+    font-weight:1000;
+}
+.form-select{
+    border-radius:0%;
+}
+#btn-group{
+   margin:20px;
+   margin-left:486px;
+}
+#mataching{
+    text-align: center;
+    font-family: inter;
+    font-weight: 200;
+}
+#mataching:hover{
+    background-color: #1b3451;
+    color:#f0f2eb;
+}
+thead{
+    background-color: #b7b729;
+    text-align: center;
+}
+#reason{
+    height: 110px;
+}
+.gr{
+    display:flex;
+    margin-left:337px;
+}
+.pending{
+    display:flex;
+    margin-top:15px;
+    margin-left:95px;
+}
+#gro{
+    margin:10px;
+}
+#Approved{
+    
+    padding:10px;
+
+}
+#reject{
+    
+    padding:10px;
+}
+#Delete{
+  
+    padding:10px;
+}
+#popupContainer {
+    display: none;
+    position: fixed;
+    top: 40%;
+    left: 30%;
+    background: rgba(0, 0, 0, 0);
+    width:696px;
+    height:auto;
+ 
+    justify-content: center;
+    align-items: center;
+}
+
+#Popreject{
+    display: none;
+    position: fixed;
+    top: 40%;
+    left: 45%;
+    background: rgba(0, 0, 0, 0);
+    width:696px;
+   
+    height:auto;
+ 
+    justify-content: center;
+    align-items: center;
+}
+#pass{
+    display: none;
+    position: fixed;
+    top: 40%;
+    left: 45%;
+    background: rgba(0, 0, 0, 0);
+    width:696px;
+   
+    height:auto;
+ 
+    justify-content: center;
+    align-items: center;
+}
+#checkpass{
+    margin-top:10px;
+}
+#delete_check{
+    display: none;
+    position: fixed;
+    top: 40%;
+    left: 45%;
+    background: rgba(0, 0, 0, 0);
+    width:696px;
+   
+    height:auto;
+ 
+    justify-content: center;
+    align-items: center;
+}
+.fa-ban{
+    font-size:35px;
+    color:red;
+}
+#popupCard {
+    background: #fff;
+    border-radius:0px 0px 3px 3px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+ 
+#pass_change{
+    background: #fff;
+    border-radius:0px 0px 3px 3px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width:300px;
+    border-radius:10px;
+}
+#popCard_delete{
+    background: #fff;
+    border-radius:0px 0px 3px 3px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width:300px;
+    border-radius:10px;
+}
+#closePopup {
+    position: absolute;
+    top:11px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #E5E5E5;
+    height: 16px;
+    width:16px;
+    border-radius:2px;
+}
+.header_popup{
+    background-image: url("img/Screenshot\ 2024-01-15\ 110553.png");
+    height:20px;
+    border-radius:3px 3px 0px 0px;
+    height:40px;
+}
+.color_approve{
+    height:50px;
+    width:5px;
+    background-color: #00C62F;
+    /* border-radius:0px 3px 3px 0px; */
+    margin-right:10px;
+}
+.color_reject{
+    height:50px;
+    width:5px;
+    background-color: red;
+    /* border-radius:0px 3px 3px 0px; */
+    margin-right:10px;
+}
+.fa-xmark{
+    position: absolute;
+    top:2px;
+    margin-left: -5px;
+    color:#888888;
+    font-size: 13px;
+}
+.notibody.Name:hover {
+    background-color: #1b3451;
+    color: #f0f2eb;
+}
+
+#mac:hover{
+    background-color: #1b3451;
+    color:#f0f2eb;
+}
+.custom-hr{
+    width:698px;
+    margin-left: 11px;
+    margin-bottom:0px;
+}
+.dates{
+    margin:0;
+    padding:0;
+}
+#per{
+    margin-top:70px;
+    
+}
+#ss{
+    position: absolute;
+    left:235px;
+    margin:auto;
+}
+#acti{
+    
+    font-size: 1000px;
+}
+.form-groups{
+    padding:20px;
+    width:300px;
+}
+
+.fa-circle-xmark{
+    position: absolute;
+    top:13px;
+    left:272px;
+}
+#fa-xmark{
+    color:#E5E5E5;
+    font-size: 15px;
+    position: absolute;
+    top:10px;
+    left:6px;
+   
+}
+#checkReject{
+    margin-top:20px;
+}
+#noti{
+    position:fixed;
+    top:145px;
+    left:400px;
+    height:60px;
+    width:300px;
+    border-radius:5px 5px 0px 0px;
+    background-color:#1b3451;
+   
+}
+#noti p {
+    color:#f0f2eb;
+    font-family: inter;
+    font-weight: 700;
+ 
+    padding-top:15px;
+    padding-left:106px;
+
+}
+#stu_per{
+    position: fixed;
+    top:206px;
+    left:400px;
+    height:60px;
+    width:300px;
+    background-color:#1b3451;
+} 
+#stu_per p{
+    color:#f0f2eb;
+    font-family: inter;
+    padding-top:15px;
+    padding-left:30px;
+}
+#num {
+    visibility: visible;
+    color: white;
+}
+
+.fa-list-check{
+    font-size: 25px;
+    color:#f0f2eb;
+    padding-right:30px;
+}
+#stu_grie{
+    position: fixed;
+    top:268px;
+    left:400px;
+    height:60px;
+    width:300px;
+    border-radius:0px 0px 5px 5px;
+    background-color:#1b3451;
+}
+#stu_grie p{
+    color:#f0f2eb;
+    font-family: inter;
+  
+    padding-top:15px;
+    padding-left:30px;
+}
+.fa-envelope{
+    font-size: 25px;
+    color:#f0f2eb;
+    padding-right:30px;
+}
+#img_profile{
+    
+    margin-left:490px;
+    
+    width:300px;    
+    border-radius:10px;
+}
+#personal-info{
+    position: fixed;
+    top:148px;
+    left:1070px;
+    height:60px;
+    width:300px;
+    height:auto;
+    width:300px;
+    padding:20px;
+    border-radius:5px;
+    background-color:#1b3451;   
+}
+
+
+
+#personal-info p{
+    color:#f0f2eb;
+    font-family: inter;
+    font-weight: 600;
+}
+#info_tittle{
+    text-align: center;
+}
+#change-pass{
+    position: fixed;
+    top:420px;
+    left:1072px;
+    z-index:10;
+}
+#change-btn{
+    width:240px;
+    height:55px;
+    font-size: 20px;
+    font-weight: 400;
+}
+#change-icon{
+    width:60px;
+    font-size: 20px;
+}
+#back{
+    padding:10px;
+}
+/* .gr_info{
+    display:flex;
+    flex-direction: column;
+} */
